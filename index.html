@@ -3349,13 +3349,13 @@
         <!-- Center Typographic Staging (IDRISS DEV) -->
         <div class="tamal-hero-content">
             <div class="tamal-hero-badge">
-                <span class="th-dot"></span> Développeur Full Stack &amp; Agents IA 
+                <span class="th-dot"></span> Développeur Full Stack Junior &amp; Agents IA
             </div>
 
             <h1 class="tamal-hero-title" id="heroTitle">IDRISS</h1>
 
             <div class="tamal-hero-actions">
-                <a href="cv.pdf" download class="tamal-hero-btn primary magnetic">
+                <a href="MonCV.pdf" download class="tamal-hero-btn primary magnetic">
                     <i class="fas fa-download"></i> Télécharger mon CV
                 </a>
                 <a href="#contact" class="tamal-hero-btn ghost magnetic">
@@ -3396,8 +3396,8 @@
                     <div class="about-frame-accent"></div>
                 </div>
                 <div class="about-text rv-r">
-                    <h3>Développeur &amp; <em>Entrepreneur</em></h3>
-                    <p>Développeur Full Stack basé à Abidjan</strong>, diplômé d'un
+                    <h3>Développeur Full Stack &amp; <em>Junior</em></h3>
+                    <p>Basé à Abidjan</strong>, diplômé d'un
                         <strong>BTS Informatique Développeur d'Application</strong> (IFS-ICK, 2025) et actuellement en
                         <strong>Licence DASI à l'ESATIC</strong>.
                     </p>
@@ -3460,8 +3460,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- PROJECTS -->
     <!-- ═══════════════════════════════════════
@@ -3538,7 +3536,7 @@
                                 <!-- Files Stack with REAL project captures -->
                                 <div class="gf-files" role="list">
                                     <div role="listitem" class="gf-sheet-slot">
-                                        <a href="https://jetrouvemonlogement.ci" target="_blank" rel="noopener"
+                                        <a href="https://jetrouvemonlogement.com" target="_blank" rel="noopener"
                                             class="gf-sheet gf-sheet--art"
                                             style="--gf-slot: -1; --gf-depth: 4; --gf-jx: -1.2px; --gf-jr: -1.5deg; z-index: 1;">
                                             <img class="gf-sheet-art" src="projets/web-jetrouvemonlogement.png"
@@ -4412,18 +4410,18 @@
                 e.preventDefault();
                 const n = document.getElementById('name').value.trim();
                 const em = document.getElementById('email').value.trim();
+                const sub = document.getElementById('subject').value.trim() || 'Sans sujet';
                 const msg = document.getElementById('message').value.trim();
                 if (!n || !em || !msg) { alert('Merci de remplir les champs obligatoires.'); return; }
                 if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) { alert('Email invalide.'); return; }
-                alert('Merci ! Votre message a bien été envoyé. Je reviens vers vous rapidement.');
+
+                const text = `📩 *Nouveau message — Portfolio*\n\n*Nom :* ${n}\n*Email :* ${em}\n*Sujet :* ${sub}\n\n*Message :*\n${msg}`;
+                window.open('https://wa.me/2250778638987?text=' + encodeURIComponent(text), '_blank');
                 this.reset();
             });
 
             /* ── Year ── */
             document.getElementById('yr').textContent = new Date().getFullYear();
-
-
-
 
             /* ── LIGHTBOX MODAL CONTROLLER ── */
             const modal = document.getElementById('projectModal');
